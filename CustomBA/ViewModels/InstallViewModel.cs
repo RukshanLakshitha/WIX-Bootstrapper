@@ -1,13 +1,13 @@
 ﻿using CustomBA.Models;
 using Microsoft.Practices.Prism.Commands;
-using Microsoft.Practices.Prism.ViewModel;
+using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Tools.WindowsInstallerXml.Bootstrapper;
 using System;
 using System.Windows.Input;
 
 namespace CustomBA.ViewModels
 {
-    public class InstallViewModel : NotificationObject
+    public class InstallViewModel : BindableBase
     {
         public enum InstallState
         {
@@ -41,8 +41,7 @@ namespace CustomBA.ViewModels
             {
                 if (message != value)
                 {
-                    message = value;
-                    RaisePropertyChanged(() => Message);
+                    SetProperty(ref message, value);
                 }
             }
         }
@@ -57,9 +56,8 @@ namespace CustomBA.ViewModels
             {
                 if (state != value)
                 {
-                    state = value;
                     Message = state.ToString();
-                    RaisePropertyChanged(() => State);
+                    SetProperty(ref state, value);
                 }
             }
         }
@@ -87,8 +85,7 @@ namespace CustomBA.ViewModels
 
             set
             {
-                progress = value;
-                RaisePropertyChanged(() => this.Progress);
+                SetProperty(ref progress, value);
             }
         }
 
