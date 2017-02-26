@@ -22,6 +22,10 @@ namespace CustomBA.ViewModels
         private string message;
         private BootstrapperApplicationModel model;
         private string username;
+        private int progress;
+
+        private int cacheProgress;
+        private int executeProgress;
 
         public ICommand InstallCommand { get; private set; }
         public ICommand UninstallCommand { get; private set; }
@@ -74,6 +78,20 @@ namespace CustomBA.ViewModels
             }
         }
 
+        public int Progress
+        {
+            get
+            {
+                return progress;
+            }
+
+            set
+            {
+                progress = value;
+                RaisePropertyChanged(() => this.Progress);
+            }
+        }
+
         public InstallViewModel(BootstrapperApplicationModel model)
         {
             this.model = model;
@@ -95,11 +113,24 @@ namespace CustomBA.ViewModels
                     .InvokeShutdown();
                 }
             }, () => State != InstallState.Cancelled);
+
+            this.model.BootstrapperApplication.CacheAcquireProgress += (sender, args) =>
+            {
+                cacheProgress = args.OverallPercentage;
+                Progress =
+                (cacheProgress + executeProgress) / 2;
+            };
+
+            this.model.BootstrapperApplication.ExecuteProgress += (sender, args) =>
+            {
+                executeProgress = args.OverallPercentage;
+                Progress = (cacheProgress + executeProgress) / 2;
+            };
         }
 
         protected void DetectPackageComplete(object sender, DetectPackageCompleteEventArgs e)
         {
-            if (e.PackageId.Equals("MyInstaller.msi", StringComparison.Ordinal))
+            if (e.PackageId.Equals("Compello.BookKeeping.Setup_1.0.6247.27560.msi", StringComparison.Ordinal))
             {
                 State = e.State == PackageState.Present ? InstallState.Present : InstallState.NotPresent;
             }

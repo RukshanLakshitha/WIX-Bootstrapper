@@ -14,8 +14,12 @@
     <WixVariable Id="WixMbaPrereqLicenseUrl" Value=""/>
     <WixVariable Id="WixMbaPrereqPackageId" Value=""/>
     <Chain>
-      <MsiPackage SourceFile="Lib\Compello.BookKeeping.Setup_1.0.6247.27560.msi">
+      <MsiPackage SourceFile="lib\Compello.BookKeeping.Setup_1.0.6247.27560.msi" Vital="yes" Compressed="yes">
         <MsiProperty Name="USERNAME" Value="[Username]"/>
+        <MsiProperty Name="WIXUI_INSTALLDIR" Value="[INSTALLFOLDER]" />
+        <MsiProperty Name="SERVICEURL" Value="http://localhost/Compello.2010.Web" />
+        <MsiProperty Name="WINAUTH" Value="False" />
+        <MsiProperty Name="CCI" Value="Comp.cci"/>
       </MsiPackage>
     </Chain>
   </Bundle>
