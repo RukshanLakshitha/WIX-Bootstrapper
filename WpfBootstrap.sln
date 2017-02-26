@@ -9,6 +9,8 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "MyBootstrapper", "MyBootstr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceApprovalBookkeeper.Setup.Bootstrapper", "InvoiceApprovalBookkeeper.Setup.Bootstrapper\InvoiceApprovalBookkeeper.Setup.Bootstrapper.csproj", "{B30F32FE-AB4C-4253-B499-7B422B2FB186}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{C109A83B-3D2F-46C3-A8B6-04ED700B50B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E292EC22-9138-4FB9-9FCB-D7A6E096193D} = {C109A83B-3D2F-46C3-A8B6-04ED700B50B3}
+		{E452016E-90B3-4CDC-B3D0-F9AB2E2DDFF1} = {C109A83B-3D2F-46C3-A8B6-04ED700B50B3}
 	EndGlobalSection
 EndGlobal
