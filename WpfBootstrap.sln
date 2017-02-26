@@ -9,6 +9,12 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "MyBootstrapper", "MyBootstr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{C109A83B-3D2F-46C3-A8B6-04ED700B50B3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compello.Bookkeeper", "Compello.Bookkeeper", "{B03D30B9-D8D4-4AFE-B4E7-4AA26E3E13F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compello.Bookkeeper.Setup.Bootstrapper", "Compello.Bookkeeper.Setup.Bootstrapper\Compello.Bookkeeper.Setup.Bootstrapper.csproj", "{AD065913-9993-413E-9CA6-682D791ADFF0}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Compello.Bookkeeper.Setup", "Compello.Bookkeeper.Setup\Compello.Bookkeeper.Setup.wixproj", "{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,20 @@ Global
 		{E452016E-90B3-4CDC-B3D0-F9AB2E2DDFF1}.Release|Any CPU.ActiveCfg = Release|x86
 		{E452016E-90B3-4CDC-B3D0-F9AB2E2DDFF1}.Release|x86.ActiveCfg = Release|x86
 		{E452016E-90B3-4CDC-B3D0-F9AB2E2DDFF1}.Release|x86.Build.0 = Release|x86
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Debug|x86.Build.0 = Debug|Any CPU
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Release|x86.ActiveCfg = Release|Any CPU
+		{AD065913-9993-413E-9CA6-682D791ADFF0}.Release|x86.Build.0 = Release|Any CPU
+		{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985}.Debug|x86.ActiveCfg = Debug|x86
+		{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985}.Debug|x86.Build.0 = Debug|x86
+		{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985}.Release|Any CPU.ActiveCfg = Release|x86
+		{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985}.Release|x86.ActiveCfg = Release|x86
+		{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +58,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E292EC22-9138-4FB9-9FCB-D7A6E096193D} = {C109A83B-3D2F-46C3-A8B6-04ED700B50B3}
 		{E452016E-90B3-4CDC-B3D0-F9AB2E2DDFF1} = {C109A83B-3D2F-46C3-A8B6-04ED700B50B3}
+		{AD065913-9993-413E-9CA6-682D791ADFF0} = {B03D30B9-D8D4-4AFE-B4E7-4AA26E3E13F1}
+		{C7404AA2-2BD3-42D0-8E34-E3ADEAA88985} = {B03D30B9-D8D4-4AFE-B4E7-4AA26E3E13F1}
 	EndGlobalSection
 EndGlobal

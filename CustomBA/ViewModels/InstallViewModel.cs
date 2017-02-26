@@ -114,8 +114,7 @@ namespace CustomBA.ViewModels
             this.model.BootstrapperApplication.CacheAcquireProgress += (sender, args) =>
             {
                 cacheProgress = args.OverallPercentage;
-                Progress =
-                (cacheProgress + executeProgress) / 2;
+                Progress = (cacheProgress + executeProgress) / 2;
             };
 
             this.model.BootstrapperApplication.ExecuteProgress += (sender, args) =>
