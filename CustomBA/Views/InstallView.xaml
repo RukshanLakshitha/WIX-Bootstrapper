@@ -14,10 +14,19 @@
     </Window.Resources>
     <Grid>
         <StackPanel>
+            <WrapPanel>
+                <Label VerticalAlignment="Center">Username:</Label>
+                <TextBox Text="{Binding Username}" Margin="10" MinWidth="150" />
+            </WrapPanel>
             <Label Content="{Binding Message}" />
             <Button Command="{Binding InstallCommand}">Install</Button>
             <Button Command="{Binding UninstallCommand}">Uninstall</Button>
             <Button Command="{Binding CancelCommand}">Cancel</Button>
+            <WrapPanel Margin="10" >
+                <Label VerticalAlignment="Center">Progress:</Label>
+                <Label Content="{Binding Progress}" />
+                <ProgressBar Width="200" Height="30" Value="{Binding Progress}" Minimum="0" Maximum="100" />
+            </WrapPanel>
         </StackPanel>
     </Grid>
 </Window>

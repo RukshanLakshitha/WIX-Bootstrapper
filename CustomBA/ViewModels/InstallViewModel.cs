@@ -21,6 +21,7 @@ namespace CustomBA.ViewModels
         private InstallState state;
         private string message;
         private BootstrapperApplicationModel model;
+        private string username;
 
         public ICommand InstallCommand { get; private set; }
         public ICommand UninstallCommand { get; private set; }
@@ -56,6 +57,20 @@ namespace CustomBA.ViewModels
                     Message = state.ToString();
                     RaisePropertyChanged(() => State);
                 }
+            }
+        }
+
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+
+            set
+            {
+                username = value;
+                model.SetBurnVariable("Username", username);
             }
         }
 

@@ -14,7 +14,9 @@
     <WixVariable Id="WixMbaPrereqLicenseUrl" Value=""/>
     <WixVariable Id="WixMbaPrereqPackageId" Value=""/>
     <Chain>
-      <MsiPackage SourceFile="Lib\Compello.BookKeeping.Setup_1.0.6247.27560.msi" />
+      <MsiPackage SourceFile="Lib\Compello.BookKeeping.Setup_1.0.6247.27560.msi">
+        <MsiProperty Name="USERNAME" Value="[Username]"/>
+      </MsiPackage>
     </Chain>
   </Bundle>
 </Wix>

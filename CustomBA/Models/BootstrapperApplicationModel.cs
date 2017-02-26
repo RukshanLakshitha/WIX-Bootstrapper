@@ -23,6 +23,11 @@ namespace CustomBA.Models
             hwnd = IntPtr.Zero;
         }
 
+        public void SetBurnVariable(string variableName, string value)
+        {
+            BootstrapperApplication.Engine.StringVariables[variableName] = value;
+        }
+
         public void SetWindowHandle(Window view)
         {
             hwnd = new WindowInteropHelper(view).Handle;
