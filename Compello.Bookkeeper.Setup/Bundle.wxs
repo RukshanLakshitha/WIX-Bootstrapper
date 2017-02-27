@@ -2,7 +2,8 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Bundle Name="Compello.Bookkeeper.Setup" Version="1.0.0.0" Manufacturer="" UpgradeCode="c7404aa2-2bd3-42d0-8e34-e3adeaa88985">
 		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
-
+    <WixVariable Id="WixMbaPrereqLicenseUrl" Value=""/>
+    <WixVariable Id="WixMbaPrereqPackageId" Value=""/>
 		<Chain>
 			<!-- TODO: Define the list of chained packages. -->
 			<!-- <MsiPackage SourceFile="path\to\your.msi" /> -->
