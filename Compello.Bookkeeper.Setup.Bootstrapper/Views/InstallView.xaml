@@ -24,7 +24,7 @@
             <Button Command="{Binding CancelCommand}">Cancel</Button>
             <WrapPanel Margin="10">
                 <Label Content="{Binding Progress}" />
-                <ProgressBar Width="200" Height="30" Value="{Binding Progress}" Minimum="0" Maximum="100" />
+                <ProgressBar Width="256" Height="30" Value="{Binding Progress}" Minimum="0" Maximum="100" />
             </WrapPanel>
         </StackPanel>
     </Grid>
